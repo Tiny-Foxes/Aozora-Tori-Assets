@@ -3,7 +3,7 @@ local Nskin = {}
 -- [1.] Button Redirects
 -- Defining on which direction the other directions should be based on
 -- This will let us use less files which is quite handy to keep the noteskin directory nice
--- Do remember this will Redirect all the files of that Direction to the Direction its pointed to
+-- Do remember this will redirect all the files of that direction to the Direction its pointed to
 
 Nskin.ButtonRedir =
 
@@ -72,17 +72,17 @@ Nskin.ElementRedir =
 Nskin.PartsToRotate =
 
 	{
-		["Receptor"]				= true,
+		["Receptor"]			= true,
 		["Tap Explosion Bright"]	= false,
 		["Tap Explosion Dim"]		= false,
-		["Tap Note"]				= true,
-		["Tap Fake"]				= true,
-		["Tap Lift"]				= true,
-		["Tap Addition"]			= true,
-		["Hold Explosion"]			= true,
+		["Tap Note"]			= true,
+		["Tap Fake"]			= true,
+		["Tap Lift"]			= true,
+		["Tap Addition"]		= true,
+		["Hold Explosion"]		= true,
 		["Hold Head Active"]		= true,
 		["Hold Head Inactive"]		= true,
-		["Roll Explosion"]			= true,
+		["Roll Explosion"]		= true,
 		["Roll Head Active"]		= true,
 		["Roll Head Inactive"]		= true,
 	}
@@ -94,11 +94,11 @@ Nskin.PartsToRotate =
 Nskin.Blank =
 
 	{
-		["Hold Tail Active"]			= true,
-		["Hold Tail Inactive"]			= true,
-		["Roll Tail Active"]			= true,
-		["Roll Tail Inactive"]			= true,
-		["Center Hold Topcap"]			= true,
+		["Hold Tail Active"]		= true,
+		["Hold Tail Inactive"]		= true,
+		["Roll Tail Active"]		= true,
+		["Roll Tail Inactive"]		= true,
+		["Center Hold Topcap"]		= true,
 	}
 	
 -- [6.] Buttons and Elements
@@ -132,13 +132,14 @@ function Nskin.Load()
 		-- We want to make this a global noteskin so we will use "Center" for fallback for unknown buttons.
 		
 		if string.find(Element, "Tap Note") or
-		string.find(Element, "Explosion") or
-		string.find(Element, "Lift") or
-		string.find(Element, "Receptor") then
+		   string.find(Element, "Explosion") or
+		   string.find(Element, "Lift") or
+		   string.find(Element, "Receptor") then
 			Button = Nskin.ButtonRedir[sButton] or "Center"
 		end
 		
 		-- Because we want the body and bottomcaps to stay the same per direction
+	
 		if (string.find(Element, "Hold") or string.find(Element, "Roll")) and not 
 		    string.find(Element, "Topcap") then
 			Button = "Down"
@@ -161,7 +162,7 @@ function Nskin.Load()
 		-- Explosion rays only stem from one part
 		
 		if string.find(Element, "Explosion") and 
-		string.find(Element, "Rays") then
+		   string.find(Element, "Rays") then
 			Button = "Down"
 		end
 			
