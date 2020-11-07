@@ -10,7 +10,7 @@ Nskin.ButtonRedir =
 	{
 	-- cardinal directions	
 		
-		Up		= "Down",
+		Up	= "Down",
 		Down	= "Down",
 		Left	= "Down",
 		Right	= "Down",
