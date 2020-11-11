@@ -17,7 +17,7 @@ Planned Features:
     (Coming in a seperate noteskin folder)
 
 Software:
-  - Made in Inkscape with love. FOSS FTW.
+  - Made with GIMP, Inkscape, and love. FOSS FTW.
 	
 Sources and Credits:
   - Code based from Lirodon's broadhead and glider noteskins.
