@@ -1,5 +1,3 @@
-![](https://raw.githubusercontent.com/akym-tsubby/SM5-Aqui-Resources/main/Alpha%20Noteskin%20Logo.png?token=AMLY2AEFQXHDTLS7ECW42AC7WLAO2)
-
 # Aqui's Alpha Noteskins
 A global noteskin series for StepMania 5.3.
 
