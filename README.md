@@ -1,7 +1,7 @@
 # Aqui's Alpha Noteskins
 A global noteskin series for StepMania 5.3.
 
-The sequel to SkyBlader07's Alpha
+The sequel to SkyBlader07's Alpha.
 By the same person, really.
 
 Sources and Credits:
