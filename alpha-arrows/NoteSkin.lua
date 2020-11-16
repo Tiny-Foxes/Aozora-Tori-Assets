@@ -3,17 +3,17 @@ local Nskin = {}
 -- [1.] Button Redirects
 -- Defining on which direction the other directions should be based on
 -- This will let us use less files which is quite handy to keep the noteskin directory nice
--- Do remember this will redirect all the files of that direction to the Direction its pointed to
+-- Do remember this will redirect all the files of that direction to the direction its pointed to
 
 Nskin.ButtonRedir =
 
 	{
 	-- cardinal directions	
 		
-		Up	= "Down",
-		Down	= "Down",
-		Left	= "Down",
-		Right	= "Down",
+		Up		= "Down",
+		Down		= "Down",
+		Left		= "Down",
+		Right		= "Down",
 		
 	-- ordinal directions
 	
@@ -24,8 +24,7 @@ Nskin.ButtonRedir =
 	
 	-- centre is center
 		
-		Center = "Center",
-		
+		Center 		= "Center",
 	}
 
 -- [2.] Rotation
@@ -36,22 +35,21 @@ Nskin.Rotate =
 	{
 	-- cardinal directions	
 	
-		Up = 180,
-		Down = 0,
-		Left = 90,
-		Right = -90,
+		Up 		= 180,
+		Down 		= 0,
+		Left 		= 90,
+		Right 		= -90,
 	
 	-- ordinal directions	
 	
-		UpLeft = 135,
-		UpRight = -135,
-		DownLeft = 45,
-		DownRight = -45,
+		UpLeft 		= 135,
+		UpRight 	= -135,
+		DownLeft 	= 45,
+		DownRight 	= -45,
 	
 	-- center
 	
 		Center = 0,
-
 	}
 
 -- [3.] Element Redirects
@@ -72,19 +70,19 @@ Nskin.ElementRedir =
 Nskin.PartsToRotate =
 
 	{
-		["Receptor"]			= true,
-		["Tap Explosion Bright"]	= false,
-		["Tap Explosion Dim"]		= false,
-		["Tap Note"]			= true,
-		["Tap Fake"]			= true,
-		["Tap Lift"]			= true,
-		["Tap Addition"]		= true,
-		["Hold Explosion"]		= true,
-		["Hold Head Active"]		= true,
-		["Hold Head Inactive"]		= true,
-		["Roll Explosion"]		= true,
-		["Roll Head Active"]		= true,
-		["Roll Head Inactive"]		= true,
+		["Receptor"]				= true,
+		["Tap Explosion Bright"]		= false,
+		["Tap Explosion Dim"]			= false,
+		["Tap Note"]				= true,
+		["Tap Fake"]				= true,
+		["Tap Lift"]				= true,
+		["Tap Addition"]			= true,
+		["Hold Explosion"]			= true,
+		["Hold Head Active"]			= true,
+		["Hold Head Inactive"]			= true,
+		["Roll Explosion"]			= true,
+		["Roll Head Active"]			= true,
+		["Roll Head Inactive"]			= true,
 	}
 
 -- [5.] Blank Redirects
@@ -94,11 +92,11 @@ Nskin.PartsToRotate =
 Nskin.Blank =
 
 	{
-		["Hold Tail Active"]		= true,
-		["Hold Tail Inactive"]		= true,
-		["Roll Tail Active"]		= true,
-		["Roll Tail Inactive"]		= true,
-		["Center Hold Topcap"]		= true,
+		["Hold Tail Active"]			= true,
+		["Hold Tail Inactive"]			= true,
+		["Roll Tail Active"]			= true,
+		["Roll Tail Inactive"]			= true,
+		["Center Hold Topcap"]			= true,
 	}
 	
 -- [6.] Buttons and Elements
@@ -106,7 +104,7 @@ Nskin.Blank =
 -- If you need help with lua go to https://quietly-turning.github.io/Lua-For-SM5/Luadoc/Lua.xml there are a bunch of codes there
 -- Also check out common it has a load of lua codes in files there
 -- Just play a bit with lua its not that hard if you understand coding
--- But SM can be an ass in some cases, and some codes jut wont work if you dont have the noteskin on FallbackNoteSkin=common in the metric.ini 
+-- But SM can be a bum in some cases, and some codes jut wont work if you dont have the noteskin on FallbackNoteSkin=common in the metric.ini 
 
 function Nskin.Load()
 	local sButton = Var "Button"
@@ -139,24 +137,27 @@ function Nskin.Load()
 		end
 		
 		-- Because we want the body and bottomcaps to stay the same per direction
-	
+		
 		if (string.find(Element, "Hold") or string.find(Element, "Roll")) and not 
 		    string.find(Element, "Topcap") then
 			Button = "Down"
 		end
 	
 		-- For the Topcap element, use a different graphic for UpLeft and UpRight, and make sure Center is blank
+		-- Hold Actors being sprite only brings pain
 		
 		if string.find(Element, "Topcap") and (sButton == "UpLeft" or sButton == "DownLeft") then
 			Button = "UpLeft"
 			
 			else if string.find(Element, "Topcap") and (sButton == "UpRight" or sButton == "DownRight") then
-			Button = "UpRight"
+				Button = "UpRight"
 		
 				else if string.find(Element, "Topcap") and sButton == "Center" then
 					Button = Nskin.ButtonRedir[sButton] or sButton
-				end	
-			end	
+				end
+			
+			end
+			
 		end
 		
 		-- Explosion rays only stem from one part
@@ -173,7 +174,7 @@ function Nskin.Load()
 		end
 
 	-- [6b.] Others
-	-- Returning first part of the code, The redirects, Second part is for commands
+	-- Returning first part of the code, the redirects, Second part is for commands
 	
 	local t = LoadActor(NOTESKIN:GetPath(Button,Element))
 	
@@ -194,5 +195,5 @@ function Nskin.Load()
 end
 -- >
 
--- dont forget to return cuz else it wont work >
+-- Don't forget to return because else it won't work
 return Nskin
