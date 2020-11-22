@@ -6,7 +6,7 @@ return Def.ActorFrame {
 		InitCommand=NOTESKIN:GetMetricA('ReceptorArrow', 'InitCommand');
 		NoneCommand=NOTESKIN:GetMetricA('ReceptorArrow', 'NoneCommand');
 	};
-	
+
 	Def.Sprite {
 		Texture=NOTESKIN:GetPath( '_down', 'rflash' );
 		Frame0000=0;
@@ -16,5 +16,4 @@ return Def.ActorFrame {
 		LiftCommand=NOTESKIN:GetMetricA('ReceptorOverlay', 'LiftCommand');
 		NoneCommand=NOTESKIN:GetMetricA('ReceptorArrow', 'NoneCommand');
 	};
-	
 };
