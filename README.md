@@ -1,3 +1,5 @@
+![Alpha](https://pixelfed.social/storage/m/_v2/105529852282671104/ab7d89eb2-ea8aa4/KiGeoBZDdWmv/EJxYaYoYhjubPGWVAaM09Nuqs37xf42xrdajEBAn.png)
+
 # Aqui's Alpha Noteskins
 A global noteskin series for StepMania 5.3.
 
@@ -16,6 +18,6 @@ noteskin folders under the global directory:
 - Code based from Lirodon's broadhead and glider noteskins.
 - Credits to Jose Valera for the Fallback Explosion code and help!
 - Shoutout to the Moondance community, huehehe!
-	
+
 ### Licenses:
 This noteskin is released under the Apache 2.0 License.
