@@ -8,9 +8,12 @@ By the same person, really.
 
 ### Installation
 
-Click the green button labelled "Code" and select "Download ZIP"  
-After downloading the .ZIP file, be sure to put the  
-noteskin folders under the global directory:
+Check the Releases page for version releases, or click the green button
+labelled "Code" and select "Download ZIP" if you want to download with
+the latest commits.  
+
+After downloading the .ZIP files, be sure to put the
+noteskin folders (alpha-arrows) under the global directory:
 
 `[Outfox Directory]\Appearance\NoteSkins\global`
 
