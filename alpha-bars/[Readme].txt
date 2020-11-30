@@ -3,7 +3,7 @@
 The Sequel to SkyBlader07's Alpha
 By the same person, really.
 
-<- Alpha-Bar ->
+<- Alpha-Bars ->
 
 A simple noteskin built to support dance, pump, beat, and KB7.
 
