@@ -14,6 +14,7 @@ t[#t+1] = NOTESKIN:LoadActor( Var "Button", "Tap Explosion Dim" )..{
 	W3Command=NOTESKIN:GetMetricA("GhostArrowDim", "W3Command");
   W2Command=NOTESKIN:GetMetricA("GhostArrowDim", "W2Command");
   W1Command=NOTESKIN:GetMetricA("GhostArrowDim", "W1Command");
+  HeldCommand=NOTESKIN:GetMetricA("GhostArrowBright", "W1Command");
 	JudgmentCommand=cmd(finishtweening);
 	BrightCommand=cmd(visible,false);
 	DimCommand=cmd(visible,true);
