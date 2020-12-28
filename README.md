@@ -13,7 +13,8 @@ labelled "Code" and select "Download ZIP" if you want to download with
 the latest commits.  
 
 After downloading the .ZIP files, be sure to put the
-noteskin folders (alpha-arrows) under the global directory:
+noteskin folders (both "alpha-arrows" and "alpha-bars")
+under the global directory:
 
 `[Outfox Directory]\Appearance\NoteSkins\global`
 
