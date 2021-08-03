@@ -5,16 +5,23 @@ By the same person, really.
 
 <- Alpha-Arrows ->
 
-A simple, sharp, geometric, and global noteskin built for dance-pad based gamemodes.
+A simple, sharp, geometric, and global noteskin built for step-based gamemodes.
+Recommended for dance, pump, and techno.
+
+<- 2021 UPDATE ver 2.0 ->
+
+>> Revised note colours into a hybrid of Modern and SM3.9
+>> Greyscale hold graphics to avoid colour collision
+>> Minor graphical updates
 
 Features:
   - Upscaled graphics (8x from the standard 64x64 resolution)
   - Full support for game-modes that default to arrow-like graphics
-  - Explosion elements independent of rotation
+  - Explosion ray elements independent of rotation
 
 Planned Features:
   - Support for other modes such as beat and kb7
-    (Coming in a seperate noteskin folder)
+    (Coming in a seperate noteskin for non step-based gamemodes.
 
 Software:
   - Made with GIMP, Inkscape, and love. FOSS FTW.
@@ -22,7 +29,7 @@ Software:
 Sources and Credits:
   - Code based from Lirodon's broadhead and glider noteskins.
   - Credits to Jose Valera for the Fallback Explosion code and help!
-  - Shoutout to the Moondance community, huehehe!
+  - Shoutout to the Project Outfox community, huehehe!
 	
 Licenses:
 	This noteskin is released under the Apache 2.0 License.

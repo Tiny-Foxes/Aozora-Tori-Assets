@@ -61,6 +61,7 @@ Nskin.ElementRedir =
 		["Tap Fake"]						= "Tap Note",
 		["Hold Explosion"]			= "Tap Explosion Dim",
 		["Roll Explosion"]			= "Hold Explosion",
+		["Roll Topcap"]				= "Hold Topcap",
 	}
 
 -- [4.] Element Rotations
@@ -77,6 +78,7 @@ Nskin.PartsToRotate =
 		["Tap Fake"]								= true,
 		["Tap Lift"]								= true,
 		["Tap Addition"]						= true,
+		["Tap Mine"] 						= false,
 		["Hold Explosion"]					= true,
 		["Hold Head Active"]				= true,
 		["Hold Head Inactive"]			= true,
