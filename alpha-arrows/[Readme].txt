@@ -10,14 +10,22 @@ Recommended for dance, pump, and techno.
 
 [Current Update]
 
+
+<- November 2021 UPDATE ver 2.2a ->
+>> Minor visual adjustments to holds, rolls, and mines
+
+[Update History]
+
+<- November 2021 UPDATE ver 2.2 ->
+>> Revert 8th note colour
+>> Revert Holds and Rolls back to greyscale
+
 <- 2021 UPDATE ver 2.1 ->
 
 >> Revised 8th note colour to better contrast against holds
 >> Reverted Holds and Rolls to colour-coded blue and green
 >> (help aozora can't reconcile with it for some reason)
 >> adjusted mine colours
-
-[Update History]
 
 <- 2021 UPDATE ver 2.0 ->
 
