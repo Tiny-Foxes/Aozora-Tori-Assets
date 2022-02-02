@@ -60,9 +60,10 @@ Nskin.ElementRedir =
 	{
 		["Tap Fake"]				= "Tap Note",
 		["Hold Explosion"]			= "Tap Explosion Dim",
-		["Roll Explosion"]			= "Hold Explosion",
-		["Hold LiftTail Active"]	= "Hold LiftTail Inactive",	
-		["Roll LiftTail"]			= "Hold LiftTail",
+		["Roll Explosion"]			= "Tap Explosion Dim",
+		["Hold LiftTail Active"]	= "Hold LiftTail Inactive",
+		["Roll LiftTail Active"]	= "Hold LiftTail Inactive",
+		["Roll LiftTail Inactive"]	= "Hold LiftTail Inactive",
 	}
 
 -- [4.] Element Rotations
@@ -77,7 +78,7 @@ Nskin.PartsToRotate =
 		["Tap Explosion Dim"]		= false,
 		["Tap Note"]				= true,
 		["Tap Fake"]				= true,
-		["Tap Lift"]				= true,
+		["Tap Lift"]				= false,
 		["Tap Addition"]			= true,
 		["Tap Mine"] 				= false,
 		["Hold Explosion"]			= true,
@@ -146,19 +147,14 @@ function Nskin.Load()
 			Button = "Down"
 		end
 
-		-- For the Topcap element, use a different graphic for UpLeft and UpRight, and make sure Center is blank
+		-- For the Topcap element, use a different graphic for ordinal directions, and leave centre blank.
 		-- Hold Actors being sprite only brings pain
 
-		if string.find(Element, "Topcap") and (sButton == "UpLeft" or sButton == "DownLeft") then
+		if string.find(Element, "Topcap") and (sButton == "UpLeft" or sButton == "DownLeft" or sButton == "UpRight" or sButton == "DownRight") then
 			Button = "UpLeft"
 
-			else if string.find(Element, "Topcap") and (sButton == "UpRight" or sButton == "DownRight") then
-				Button = "UpRight"
-
-				else if string.find(Element, "Topcap") and sButton == "Center" then
-					Button = Nskin.ButtonRedir[sButton] or sButton
-				end
-
+			else if string.find(Element, "Topcap") and sButton == "Center" then
+				Button = Nskin.ButtonRedir[sButton] or sButton
 			end
 
 		end
@@ -170,9 +166,10 @@ function Nskin.Load()
 			Button = "Down"
 		end
 
-		-- Only one kind of mine is used
+		-- Only one kind of mine and lift direction is used
 
-		if string.find(Element, "Tap Mine") then
+		if string.find(Element, "Mine") or 
+		   string.find(Element, "Lift") then
 			Button = "Down"
 		end
 
