@@ -1,7 +1,7 @@
 ![Alpha](https://pixelfed.social/storage/m/_v2/105529852282671104/ab7d89eb2-ea8aa4/KiGeoBZDdWmv/EJxYaYoYhjubPGWVAaM09Nuqs37xf42xrdajEBAn.png)
 
 # Aqui's Alpha Noteskins
-A global noteskin series for StepMania 5.3.
+A global noteskin series for Project Outfox.
 
 The sequel to SkyBlader07's Alpha.  
 By the same person, really.
