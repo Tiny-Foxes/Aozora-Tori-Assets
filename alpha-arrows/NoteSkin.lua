@@ -4,63 +4,52 @@ local Nskin = {}
 -- Defining on which direction the other directions should be based on
 -- This will let us use less files which is quite handy to keep the noteskin directory nice
 -- Do remember this will redirect all the files of that direction to the direction its pointed to
-
 Nskin.ButtonRedir =
-
 	{
 	-- cardinal directions
-
-		Up			= "Down",
+		Up		= "Down",
 		Down		= "Down",
 		Left		= "Down",
 		Right		= "Down",
 
 	-- ordinal directions
-
 		UpLeft		= "Down",
 		UpRight 	= "Down",
 		DownLeft	= "Down",
 		DownRight	= "Down",
 
 	-- centre is center
-
 		Center 		= "Center",
 	}
 
 -- [2.] Rotation
 -- Define the parts to be rotated at which degree
-
 Nskin.Rotate =
 
 	{
 	-- cardinal directions
-
-		Up 			= 180,
+		Up 		= 180,
 		Down 		= 0,
 		Left 		= 90,
 		Right 		= -90,
 
 	-- ordinal directions
-
 		UpLeft 		= 135,
 		UpRight 	= -135,
 		DownLeft 	= 45,
 		DownRight 	= -45,
 
 	-- centre is center
-
 		Center 		= 0,
 	}
 
 -- [3.] Element Redirects
 -- Define elements that need to be redirected
-
 Nskin.ElementRedir =
-
 	{
-		["Tap Fake"]				= "Tap Note",
-		["Hold Explosion"]			= "Tap Explosion Dim",
-		["Roll Explosion"]			= "Tap Explosion Dim",
+		["Tap Fake"]			= "Tap Note",
+		["Hold Explosion"]		= "Tap Explosion Dim",
+		["Roll Explosion"]		= "Tap Explosion Dim",
 		["Hold LiftTail Active"]	= "Hold LiftTail Inactive",
 		["Roll LiftTail Active"]	= "Hold LiftTail Inactive",
 		["Roll LiftTail Inactive"]	= "Hold LiftTail Inactive",
@@ -69,22 +58,20 @@ Nskin.ElementRedir =
 -- [4.] Element Rotations
 -- Parts of noteskins which we want to rotate
 -- Tap Explosions are set to false as they'll be rotated in aFallback Explosion
-
 Nskin.PartsToRotate =
-
 	{
-		["Receptor"]				= true,
+		["Receptor"]			= true,
 		["Tap Explosion Bright"]	= false,
 		["Tap Explosion Dim"]		= false,
-		["Tap Note"]				= true,
-		["Tap Fake"]				= true,
-		["Tap Lift"]				= false,
-		["Tap Addition"]			= true,
-		["Tap Mine"] 				= false,
-		["Hold Explosion"]			= true,
+		["Tap Note"]			= true,
+		["Tap Fake"]			= true,
+		["Tap Lift"]			= false,
+		["Tap Addition"]		= true,
+		["Tap Mine"] 			= false,
+		["Hold Explosion"]		= true,
 		["Hold Head Active"]		= true,
 		["Hold Head Inactive"]		= true,
-		["Roll Explosion"]			= true,
+		["Roll Explosion"]		= true,
 		["Roll Head Active"]		= true,
 		["Roll Head Inactive"]		= true,
 	}
@@ -92,9 +79,7 @@ Nskin.PartsToRotate =
 -- [5.] Blank Redirects
 -- Parts that should be Redirected to _Blank.png
 -- you can add/remove stuff if you want
-
 Nskin.Blank =
-
 	{
 		["Hold Tail Active"]		= true,
 		["Hold Tail Inactive"]		= true,
@@ -118,21 +103,17 @@ function Nskin.Load()
 	-- This is where arguments related to all gametypes are covered.
 
 		-- Setting global button
-
 		local Button = Nskin.ButtonRedir[sButton] or "Down"
 
 		-- Setting global element
-
 		local Element = Nskin.ElementRedir[sElement] or sElement
 
 		-- Set Hold/Roll Heads to Tap Notes
-
 		if string.find(sElement, "Head") then
 			Element = "Tap Note"
 		end
 
 		-- We want to make this a global noteskin so we will use "Center" for fallback for unknown buttons.
-
 		if string.find(Element, "Tap Note") or
 		   string.find(Element, "Explosion") or
 		   string.find(Element, "Lift") or
@@ -141,7 +122,6 @@ function Nskin.Load()
 		end
 
 		-- Because we want the body and bottomcaps to stay the same per direction
-
 		if (string.find(Element, "Hold") or string.find(Element, "Roll")) and not
 		    string.find(Element, "Topcap") then
 			Button = "Down"
@@ -149,25 +129,20 @@ function Nskin.Load()
 
 		-- For the Topcap element, use a different graphic for ordinal directions, and leave centre blank.
 		-- Hold Actors being sprite only brings pain
-
 		if string.find(Element, "Topcap") and (sButton == "UpLeft" or sButton == "DownLeft" or sButton == "UpRight" or sButton == "DownRight") then
 			Button = "UpLeft"
-
 			else if string.find(Element, "Topcap") and sButton == "Center" then
 				Button = Nskin.ButtonRedir[sButton] or sButton
 			end
-
 		end
 
 		-- Explosion rays only stem from one part
-
 		if string.find(Element, "Explosion") and
 		   string.find(Element, "Rays") then
 			Button = "Down"
 		end
 
 		-- Only one kind of mine and lift direction is used
-
 		if string.find(Element, "Mine") or 
 		   string.find(Element, "Lift") then
 			Button = "Down"
@@ -175,7 +150,6 @@ function Nskin.Load()
 
 	-- [6b.] Others
 	-- Returning first part of the code, the redirects, Second part is for commands
-
 	local t = LoadActor(NOTESKIN:GetPath(Button,Element))
 
 	-- Set blank redirects
