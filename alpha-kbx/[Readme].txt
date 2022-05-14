@@ -6,6 +6,10 @@ A simple, sharp, geometric noteskin specifically designed for KBX.
 [Notes]
 - Certain Themes may mask the parts of the receptor when scroll direction is set upwards.
 
+[Version History]
+  - 1.0.0
+    > Initial Release.
+
 [Software]
   - Made with GIMP, Inkscape, and love. FOSS FTW.
 	

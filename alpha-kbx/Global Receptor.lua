@@ -25,18 +25,17 @@ return Def.ActorFrame {
 	
 	-- Upper Gradient Flash
 	Def.Quad {
-		InitCommand=function(self) self:scaletoclipped(64,24):diffuse(1,1,1,0.75):effectclock("beat"):queuecommand("Flash") end,
-		FlashCommand=function(self) self:diffuseramp():effectcolor1(0,1,1,0.625):effectcolor2(0,1,1,1):effecttiming(0.2,0,0.8,0) end,
-		ReverseOnCommand=function(self) self:y(-24):fadetop(0.75) end,
-		ReverseOffCommand=function(self) self:y(24):fadebottom(0.75) end
+		InitCommand=function(self) self:scaletoclipped(64,24):diffuse(1,1,1,1):effectclock("beat"):queuecommand("Flash") end,
+		FlashCommand=function(self) self:diffuseramp():effectcolor1(0,0.75,1,0.625):effectcolor2(0,0.75,1,1):effecttiming(0.2,0,0.8,0) end,
+		ReverseOnCommand=function(self) self:y(-24):fadetop(0.875) end,
+		ReverseOffCommand=function(self) self:y(24):fadebottom(0.875) end
 	},
 	-- Lane Flash
 	Def.Quad {
-		InitCommand=function(self) self:diffuse(color("#00FFFF")):scaletoclipped(64,768):fadetop(1):diffusealpha(0) end,
-		PressCommand=function(self) self:diffusealpha(0.5) end,
+		InitCommand=function(self) self:diffuse(color("#00C0FF")):scaletoclipped(64,768):diffusealpha(0) end,
+		PressCommand=function(self) self:diffusealpha(0.375) end,
 		LiftCommand=function(self) self:stoptweening():linear(0.2):diffusealpha(0) end,
-		ReverseOnCommand=function(self) self:y(32):valign(1) end,
-		ReverseOffCommand=function(self) self:y(-32):valign(0) end
+		ReverseOnCommand=function(self) self:y(32):valign(1):fadetop(1) end,
+		ReverseOffCommand=function(self) self:y(-32):valign(0):fadebottom(1) end
 	}
-	
 }

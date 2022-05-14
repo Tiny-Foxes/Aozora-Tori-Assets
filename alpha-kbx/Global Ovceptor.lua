@@ -42,9 +42,9 @@ return Def.ActorFrame {
 	
 	-- Press Flash
 	Def.Quad {
-		OnCommand=function(self) self:scaletoclipped(64,64):diffuse(0,1,1,0):fadetop(0.75) end,
-		ReverseOnCommand=function(self) self:y(32):valign(0) end,
-		ReverseOffCommand=function(self) self:y(-32):valign(1) end,
+		OnCommand=function(self) self:scaletoclipped(64,64):diffuse(0,0.75,1,0) end,
+		ReverseOnCommand=function(self) self:y(32):valign(0):fadetop(0.75) end,
+		ReverseOffCommand=function(self) self:y(-32):valign(1):fadebottom(0.75) end,
 		PressCommand=function(self) self:diffusealpha(0.5) end,
 		LiftCommand=function(self) self:stoptweening():linear(0.2):diffusealpha(0) end
 	},
