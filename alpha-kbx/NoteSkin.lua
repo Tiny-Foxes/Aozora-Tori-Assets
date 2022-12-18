@@ -6,7 +6,7 @@ local Nskin = {}
 -- Do remember this will redirect all the files of that direction to the direction its pointed to
 Nskin.ButtonRedir =
 	{
-	-- Still wondering how I can optimise this for even-numbered layouts. Will fix later.
+	-- Still wondering how I can optimize this for even-numbered layouts. Will fix later.
 		Key1		= "White";
 		Key2		= "Blue";
 		Key3		= "White";
@@ -93,9 +93,9 @@ function Nskin.Load()
 		
 
 		-- Elements shared across all buttons must fall back to one direction.
+		-- If you'll use Ovceptor Elements, don't forget to add the string below to make sure it's rendered.
 		if string.find(Element, "Tap Explosion") or
 		   string.find(Element, "Receptor") or 
-		   string.find(Element, "Ovceptor") or 
 		   string.find(Element, "Tap Lift") or
 		   string.find(Element, "Mine") then
 			Button = "Global"

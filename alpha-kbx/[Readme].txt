@@ -3,12 +3,16 @@
 <- Alpha-KBX ->
 A simple, sharp, geometric noteskin specifically designed for KBX.
 
+[Updates]
+- 1.0.1.1e, 12/18/2022
+--- Receptor Change yet again
+--- Styling changes
+
+- 1.0.1 ??/06/2022
+--- Receptor Style updated.
+
 [Notes]
 - Certain Themes may mask the parts of the receptor when scroll direction is set upwards.
-
-[Version History]
-  - 1.0.0
-    > Initial Release.
 
 [Software]
   - Made with GIMP, Inkscape, and love. FOSS FTW.
