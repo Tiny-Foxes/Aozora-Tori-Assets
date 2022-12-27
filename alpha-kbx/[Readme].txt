@@ -4,18 +4,17 @@
 A simple, sharp, geometric noteskin specifically designed for KBX.
 
 [Updates]
-- 1.0.1.1e, 12/18/2022
---- Receptor Change yet again
---- Styling changes
+- 1.0.1.2a (December 28, 2022)
+- Finalized visual overhaul of receptors.
+- Adjusted hold graphics for better visibility.
+- Fixed Mine graphics renders as not to make them look broken.
 
-- 1.0.1 ??/06/2022
---- Receptor Style updated.
-
-[Notes]
-- Certain Themes may mask the parts of the receptor when scroll direction is set upwards.
+[To-Do]
+- Squash some hold explosion bugs.
+- Panic over roll body styling.
 
 [Software]
-  - Made with GIMP, Inkscape, and love. FOSS FTW.
+  - Made with Inkscape and love. FOSS FTW.
 	
 [Sources and Credits]
   - Code based from Lirodon's broadhead and glider, and the default KBX noteskin.

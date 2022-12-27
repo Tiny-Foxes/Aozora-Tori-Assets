@@ -36,7 +36,7 @@ return Def.ActorFrame {
 	Def.Quad {
 		InitCommand=function(self) self:x(0):diffuse(0,0,0,0.75):scaletoclipped(64,192) end,
 		ReverseOnCommand=function(self) self:fadetop(0.25):fadebottom(0.0625) end,
-		ReverseOffCommand=function(self) self:fadebottom(0.25)fadetop(0.0625) end
+		ReverseOffCommand=function(self) self:fadebottom(0.25):fadetop(0.0625) end
 	},
 	-- Background Left Line
 	Def.Quad {
@@ -75,12 +75,6 @@ return Def.ActorFrame {
 		LiftCommand=function(self) self:stoptweening():linear(0.2):diffusealpha(0) end,
 		ReverseOnCommand=function(self) self:y(96):valign(1):fadetop(1):fadebottom(0.0625) end,
 		ReverseOffCommand=function(self) self:y(-96):valign(0):fadetop(0.0625):fadebottom(1) end
-	},
-	-- Lane Inner FLASH
-		Def.Quad {
-		InitCommand=function(self) self:diffuse(0,1,1,0.25):scaletoclipped(64,18):diffusealpha(0) end,
-		PressCommand=function(self) self:diffusealpha(0.5) end,
-		LiftCommand=function(self) self:stoptweening():linear(0.2):diffusealpha(0) end,
 	},
 	Buttons
 }
