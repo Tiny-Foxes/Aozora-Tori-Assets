@@ -1,8 +1,9 @@
-# Aozora Tori's Alpha Noteskins
-A noteskin series for Project Outfox.
+# Aozora Tori's Asset Repository
+A series of assets made for Project Outfox.
 
-The sequel and expansion to the first Alpha noteskin (under my old alias, SkyBlader07).
-Comes in alpha-arrows (global) and alpha-kbx (kbx).
+// Coming Soon //
+### Aozora-Note
+A visual refresh of Alpha that literally, aims to take some sharpness away and simplify graphics (maybe) for a friendly look. 
 
 ### Installation
 
