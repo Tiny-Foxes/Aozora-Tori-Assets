@@ -1,10 +1,11 @@
-# Aozora Tori's Alpha Noteskins
-A noteskin series for Project Outfox.
+# Aozora Tori's OutFox Assets
+A collection of assets for use with Project Outfox. 
 
-The sequel and expansion to the first Alpha noteskin (under my old alias, SkyBlader07).
-Comes in alpha-arrows (global) and alpha-kbx (kbx).
+### Adding Judgments
+Once downloaded, move the files to:
+`[Outfox Directory]\Appearance\Judgments`
 
-### Installation
+### Noteskin Installation
 
 Check the Releases page for version releases, or click the green button
 labelled "Code" and select "Download ZIP" if you want to download with
@@ -20,7 +21,7 @@ For alpha-kbx
 `[Outfox Directory]\Appearance\NoteSkins\kbx`
 
 ### Sources and Credits:
-- Code based from Lirodon's broadhead and glider, and the default KBX noteskin.
+- Noteksin codes based from Lirodon's broadhead and glider, and the default KBX noteskin.
 - Credits to Jose Valera for the Fallback Explosion code and help!
 - Shoutout to the Project Outfox community, huehehe!
 
